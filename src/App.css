@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: "Trirong", serif;
+    background-color: rgb(255, 255, 255);  /* Full background */
+    transition: background-color 0.5s ease;
+}
+
+/* Navigation Section */
+.navSection {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(67, 9, 202);
+    color: white;
+    padding: 0 20px;
+    font-size: large;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.navSection:hover {
+    background-color: rgb(50, 7, 160); /* Darken on hover */
+}
+
+.navSection span {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.navSection span:hover {
+    transform: scale(1.1);
+}
+
+/* Main Container */
+.collectionSection {
+    display: flex;
+    height: calc(100vh - 80px);  /* Full height minus navbar */
+    width: 100%;  /* Ensure full width coverage */
+}
+
+/* Sidebar Section */
+.sideBar {
+    width: 12%;  /* Sidebar width adjusted */
+    height: 100%;  /* Full height of the collection section */
+    padding: 10px;
+    background-color: rgb(0, 123, 255);  /* Vibrant Blue */
+    box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.sideBar:hover {
+    background-color: rgb(0, 105, 217);  /* Darker shade on hover */
+    transform: scale(1.02);
+}
+
+.sideBar ul li {
+    list-style: none;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: medium;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.sideBar ul li:hover {
+    color: #FFD700; /* Gold color on hover */
+}
+
+/* Register Section */
+.registerSection {
+    padding: 20px;
+    background-color: white;
+    border: 1px solid red;
+    width: 100%;  /* Remaining width */
+    display: flex;
+    justify-content: center;   /* Center form horizontally */
+    align-items: center;      /* Center form vertically */
+    height:100%;  /* Increased height of register box */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.loginSection{
+  padding: 20px;
+  background-color: white;
+  border: 1px solid red;
+  width: 100%;  /* Remaining width */
+  display: flex;
+  justify-content: center;   /* Center form horizontally */
+  align-items: center;      /* Center form vertically */
+  height:100%;  /* Increased height of register box */
+}
+
+/* Auth Form */
+.authForm {
+    width: 100%;
+    max-width: 400px;  /* Limit form width */
+    padding: 20px;
+    background: white;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;  /* Align elements vertically */
+    align-items: center;     /* Center-align elements */
+    gap: 20px;               /* Add spacing between form fields */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional box shadow */
+    border-radius: 8px; /* Rounded corners for form */
+    transition: transform 0.3s ease;
+}
+
+.authForm:hover {
+    transform: translateY(-5px); /* Lift up effect on hover */
+}
+
+/* Vendor Heading */
+.authForm h3 {
+    width: 100%;             /* Full width */
+    text-align: center;      /* Center the heading */
+    font-size: 24px;         /* Larger font size for the heading */
+    font-weight: bold;
+    margin-bottom: 20px;     /* Space between heading and form fields */
+    color: rgb(67, 9, 202);  /* Purple heading color */
+}
+
+/* Form Elements */
+.authForm input {
+    width: 100%;             /* Input takes full width */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.authForm input:focus {
+    border: 1px solid rgb(67, 9, 202);
+    box-shadow: 0 0 5px rgba(67, 9, 202, 0.5);
+}
+
+/* Button Styles */
+.authForm button {
+    padding: 10px 20px;
+    background-color: rgb(67, 9, 202);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.authForm button:hover {
+    background-color: rgb(50, 7, 160);
+    transform: scale(1.05);
+}
+
+/* Firm Section */
+.firmSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  transition: transform 0.3s ease;
+}
+
+.firmSection:hover {
+  transform: scale(1.02);
+}
+
+.tableForm {
+  width: 100%;
+  max-width: 60%;  /* Slightly increase width to fit elements */
+  margin-top: -100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid gray;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  gap: 10px; /* Decreased gap between form elements */
+  transition: transform 0.3s ease;
+}
+
+.tableForm:hover {
+  transform: scale(1.02);
+}
+
+.tableForm input {
+  width: 100%;
+  max-width: 85%;
+  height: 35px;
+  margin-bottom: 10px;  /* Reduced margin to decrease gap */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tableForm input:focus {
+  border-color: rgb(67, 9, 202);
+  box-shadow: 0 0 5px rgba(67, 9, 202, 0.5);
+}
+
+/* Check box inputs */
+.checkInp {
+  width: 100%;
+  max-width: 85%;
+  display: flex;
+}
+
+.checkInp label {
+  width: 20%;
+}
+
+.inputsContainer {
+  width: 100%;
+  display: flex;
+}
+
+.checboxContainer {
+  width: 100%;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checboxContainer label {
+  width: 100%;
+}
+
+.checboxContainer input {
+  margin-left: -180px;
+}
+
+.checboxContainer label {
+  font-size: small;
+}
+
+.regBoxContainer label {
+  font-size: small;
+}
+/* Product Section */
+.productSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-table {
+  width: 80vw;
+  border-collapse: collapse;
+  margin-top: 10px;  /* Slightly reduced margin */
+  transition: transform 0.3s ease;
+}
+
+.product-table:hover {
+  transform: scale(1.02);
+}
+
+.product-table th,
+.product-table td {
+  border: 1px solid rgb(128, 128, 128);
+  padding: 6px;  /* Reduced padding for a more compact look */
+}
+
+.product-table th {
+  text-align: left;
+  background-color: rgb(47, 77, 212);
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.product-table th:hover {
+  background-color: rgb(36, 59, 164);  /* Darker blue on hover */
+}
+
+.product-table input {
+  margin-bottom: 10px; /* Reduced margin for inputs in the table */
+}
+
+.deleteBtn {
+  color: red;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.deleteBtn:hover {
+  background-color: #ff0000;
+  transform: scale(1.05);
+}
+
+/* Not Found */
+.errorSection {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.errorSection h1 {
+  font-size: 4rem;
+  color: #D7263D;
+  transition: transform 0.3s ease;
+}
+
+.errorSection h1:hover {
+  transform: scale(1.1);
+}
+
+h3 {
+  color: #D7263D;
+  margin-top: 20px;
+}
+
+/* Button Submit */
+.btnSubmit button {
+  background-color: rgb(43, 43, 180);
+  width: 6rem;
+  color: white;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btnSubmit button:hover {
+  background-color: rgb(36, 36, 156);
+  transform: scale(1.05);
+}
+
+/* Wrapper for Scrollable Table */
+.tableContainer {
+  width: 95%;
+  max-width: 100%;
+  margin: 20px auto;
+  overflow-x: auto; /* Enables horizontal scroll */
+  overflow-y: auto; /* Enables vertical scroll */
+  max-height: calc(100vh - 100px); /* Limits height to viewport minus some padding */
+  border: 1px solid #ddd; /* Optional: Add a border to distinguish the container */
+  border-radius: 5px; /* Optional: Add a rounded corner */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for styling */
+  transition: transform 0.3s ease;
+}
+
+.tableContainer:hover {
+  transform: scale(1.02);
+}
+
+/* Base Table Styles */
+.productTable {
+  width: 100%; /* Table should take full width of the container */
+  border-collapse: collapse;
+  margin: 0; /* Remove extra margins from the table */
+  display: table;
+  transition: transform 0.3s ease;
+}
+
+.productTable:hover {
+  transform: scale(1.02);
+}
+
+/* Table headers */
+.productTable thead th {
+  background: linear-gradient(135deg, #4CAF50, #8BC34A);
+  color: white;
+  padding: 10px 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+  position: sticky; /* Keeps header visible while scrolling */
+  top: 0;
+  z-index: 1; /* Ensures the header stays on top */
+}
+
+/* Table rows */
+.productTable tbody tr {
+  transition: all 0.3s ease;
+}
+
+/* Alternate row color */
+.productTable tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+/* Hover effect */
+.productTable tbody tr:hover {
+  background-color: #ffeb3b;
+  transform: scale(1.02);
+}
+
+/* Table cells */
+.productTable td {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+  word-break: break-word;
+}
+
+/* Image styles */
+.productTable img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+/* Delete button styles */
+.productTable button {
+  background: linear-gradient(135deg, #f44336, #e91e63);
+  color: white;
+  width: 100px;
+  border: none;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.productTable button:hover {
+  background: #d32f2f;
+  transform: scale(1.1);
+}
+
+@media (max-width: 480px) {
+  .tableContainer {
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: calc(100vh - 50px); /* Adjust for smaller screens */
+  }
+
+  .productTable {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .productTable thead th {
+    display: none; /* Hide table headers */
+  }
+
+  .productTable tbody tr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 90%;
+    border-radius: 5px;
+    background: #fff; /* Add a background for mobile rows */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Avoid content overflow */
+  }
+
+  .productTable td {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border: none;
+    word-break: break-word; /* Break long words */
+    font-size: 14px;
+  }
+
+  .productTable td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    margin-right: 10px;
+    color: #555;
+    flex-shrink: 0; /* Prevent labels from shrinking */
+  }
+
+  .productTable img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+    object-fit: cover;
+  }
+
+  .productTable button {
+    width: 80%;
+    max-width: 150px;
+    padding: 10px;
+    margin: 10px auto;
+  }
+}

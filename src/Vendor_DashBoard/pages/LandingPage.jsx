@@ -118,6 +118,7 @@ const showAllProductsHandler = ()=>{
             <NavBar showLoginHandler = {showLoginHandler} showRegisterHandler = {showRegisterHandler}
             showLogOut = {showLogOut}
             logOutHandler = {logOutHandler}
+            showFirmTitle={showFirmTitle}
             />
             <div className="collectionSection">
             <SideBar showFirmHandler={showFirmHandler} showProductHandler ={showProductHandler}

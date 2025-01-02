@@ -504,3 +504,15 @@ h3 {
     margin: 10px auto;
   }
 }
+@media (max-width:576px){
+  .navSection h2{
+    font-size: 20px;
+    margin-left:10px;
+  }
+  .sideBar{
+    width: 80px;
+  }
+  .firmSection{
+    border: 1px solid red;
+  }
+}

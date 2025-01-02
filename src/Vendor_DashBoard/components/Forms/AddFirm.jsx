@@ -25,7 +25,7 @@ const AddFirm = () => {
       region.forEach((value)=>{
         formData.append('region',value)
       })
-      formData.append('offer',offer)
+      formData.append('offers',offer)
       if (image) {
         formData.append('image', image); // 'image' should match the backend's expected key
     } else {
@@ -49,6 +49,8 @@ const AddFirm = () => {
         setRegion([])
         setOffer("")
         setFile(null)
+        localStorage.setItem('firm_name',data.firmName)
+        window.location.reload()
       }
       else if(data.msg ==="Vendor is allowed to add only one firm"){
         alert("only one resturant registration is allowed for one vendor")

@@ -27,15 +27,15 @@ const AllProducts = () => {
 
     const deleteProduct = async (productId) => {
         try {
-            const response = await fetch(`${API_URL}/${productId}`, {
+            const response = await fetch(`${API_URL}/product/${productId}`, {
                 method: 'DELETE',
             });
             if (response.ok) {
                 alert("Product deleted successfully");
                 setProducts((prev) => prev.filter((product) => product._id !== productId));
-            } else {
+             } else {
                 const data = await response.json();
-                alert(data.message || "Failed to delete product");
+               alert(data.message || "Failed to delete product");
             }
         } catch (error) {
             alert("Error while deleting product");
